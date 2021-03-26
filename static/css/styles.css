@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+}
+
+.todo-card{
+    background-color: #ededed;
+    width: 40rem;
+    height: 60rem;
+    border: 5px solid #000;
+    border-radius: 25px;
+    position: relative;
+}
+
+.banner{
+    width: 100%;
+    height: 45%;
+    
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+
+    border-bottom: 5px solid #000;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    position: relative;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: #42ea80
+    opacity: 0.1;
+}
+
+.date{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    border: 2px solid #000;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    color: #000;
+}
+
+.list-container{
+    position: relative;
+    height: 55%;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+}
+
+.list li{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0.5rem 0 0.5rem;
+    padding: 0.5rem;
+    background: white;
+    font-size: 2rem;
+    border-radius: 25px;
+    vertical-align: center;
+}
+
+#done{
+    color: green;
+    cursor: pointer;
+}
+
+#delete{
+    cursor: pointer;
+    color: red;
+}
+
+.list-operations{
+    position: absolute;
+    font-size: 2rem;
+    bottom: 15px;
+    right: 10px;
+}
+
+#plus{
+    position: absolute;
+    right: 11px;
+    transition: 0.4s ease-in-out;
+    transform: rotate(0deg);
+}
+
+#add-todo{
+    background: #72b960;
+    color: white;
+    font-family: helvetica;
+    font-size: 4rem;
+    height: 04.5rem;
+    width: 04.5rem;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 0 3px #000;
+    
+}
+
+input{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: #000;
+}
+    
+
+.input{
+    outline: none;
+    position: absolute;
+    top: 3px;
+    right: 50px;
+    width: 320px;
+    padding: 1rem;
+    height: 4rem;
+    border: 1px solid #000;
+    border-radius: 25px;
+    outline: none;
+    display: none;
+}
+
+.input-open{
+    outline: none;
+    position: absolute;
+    width: 270px;
+    padding: 1rem;
+    height: 4rem;
+    border: 1px solid #000;
+    border-radius: 25px;
+    outline: none;
+    top: 3px;
+    right: 100px;
+    animation: fadeUp 0.4s ease-in-out;
+}
+
+.add-tick{
+    position: relative;
+    top: 3px;
+    right: 55px;
+    cursor: pointer;
+    height: 04rem;
+    width: 04rem;
+    margin: 0 auto;
+    background-color: #72b960;
+    border-radius: 50%;
+    display: none;
+}
+
+.add-tick-open{
+    position: absolute;
+    top: 3px;
+    right: 55px;
+    cursor: pointer;
+    height: 04rem;
+    width: 04rem;
+    margin: 0 auto;
+    background-color: #72b960;
+    border-radius: 50%;
+    animation: fadeUp 0.4s ease-in-out;
+}
+
+#add-tick i{
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    color: white;
+     font-size: 2.5rem;
+}
+
+@keyframes fadeUp{
+    from{
+        display: none;
+        transform: translateY(70px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width : 650px){
+        .todo-card{
+        width: 30rem;
+        height: 45rem;
+        border-radius: 25px;
+    }
+
+    .input-open{
+        width: 180px;
+        height: 3rem;
+        right: 90px;
+        top: 5px;
+    }
+
+    /* .add-tick{
+        right: 30px;
+    } */
+
+    .add-tick-open{
+        height: 03.5rem;
+        width: 03.5rem;
+        right: 48px;
+    }
+
+    #add-tick i{
+        top: 4px;
+        left: 4px;
+    }
+
+    #add-todo{
+    font-size: 4rem;
+    height: 4rem;
+    width: 4rem;
+    
+    }
+
+    .list-operations{
+    position: absolute;
+    font-size: 2rem;
+    bottom: 10px;
+    right: 8px;
+}
+    #plus{
+    right: 9px;
+    top: -3px;
+}
+}
