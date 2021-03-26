@@ -1,3 +1,3 @@
 # To-Do-App
 ### To-Do App with HTML, CSS and JS
-#### Project Link : https://nav-to-do.web.app
+#### Project Link : https://nav-todo.web.app
