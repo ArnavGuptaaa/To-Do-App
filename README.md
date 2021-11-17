@@ -1,3 +1,8 @@
 # To-Do-App
-### To-Do App with HTML, CSS and JS
-#### Project Link : https://nav-todo.web.app
+### A simple To-Do App built with HTML, CSS and JS
+
+<br/>
+
+## Demo
+<img src="./readme/demo.gif" alt="todo-app-demo">
+
